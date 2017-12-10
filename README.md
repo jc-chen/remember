@@ -2,7 +2,7 @@
 command line todo list written in go
 
 ## Installation
-### compile from source
+### Compile from source
 ```
 $ go get github.com/happyyi008/remember
 $ ./setup.sh
@@ -12,7 +12,7 @@ or
 
 ### Run the release
 
-download the binary from release into your `/usr/local/bin/`
+if you don't want to setup golang you can just download the binary from release and copy it into your `/usr/local/bin/`
 
 The current build is only for macOS
 
