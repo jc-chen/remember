@@ -1,5 +1,15 @@
 package main
 
+/*
+ *
+ * next features:
+ * status for todos
+ * ability to change the status of a todo mark done
+ * list status in ls
+ * only list todos with status
+ *
+ */
+
 import (
 	"encoding/json"
 	"flag"
@@ -20,6 +30,7 @@ var (
 var Usage = func() {
 	w := tabwriter.NewWriter(os.Stderr, 0, 0, 2, ' ', 0)
 	fmt.Fprintf(w, "Usage of %s:\n", app)
+	fmt.Fprintf(w, "$ rmb -help | -h\tprint your list of todos\n")
 	fmt.Fprintf(w, "$ rmb ls\tprint your list of todos\n")
 	fmt.Fprintf(w, "$ rmb rm <index>\tremoves the todo at <index> from your list\n")
 	fmt.Fprintf(w, "$ rmb <todo>\tadds a new todo to your list\n")
