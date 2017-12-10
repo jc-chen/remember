@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"os"
 	"strconv"
@@ -23,12 +24,12 @@ func (r *Remember) addTodo() {
 	todo := Todo{Message: message, Timestamp: time.Now()}
 	r.Todos = append(r.Todos, todo)
 	log.Debug("added new todo")
-	writeToFile()
+	r.writeToFile()
 }
 
 // TODO have different ways of printing
 func (r *Remember) listTodo() {
-	fmt.Println("You list of Todos:")
+	fmt.Println("Your list of Todos:")
 	// TODO have max line length based on terminal width and break line
 	// so long todos don't break printing
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', 0)
@@ -47,4 +48,11 @@ func (r *Remember) deleteTodo() {
 	indexToDelete, err := strconv.Atoi(os.Args[2])
 	checkErr(err)
 	r.Todos = append(r.Todos[:indexToDelete-1], r.Todos[indexToDelete:]...)
+	r.writeToFile()
+}
+
+func (r *Remember) writeToFile() {
+	res, err := json.Marshal(r)
+	checkErr(err)
+	write(res)
 }

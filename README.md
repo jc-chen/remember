@@ -18,6 +18,7 @@ The current build is only for macOS
 
 ## Usage:
 ```
+$ rmb -help | -h				# prints usage
 $ rmb ls                        # print your list of todos
 $ rmb rm <index>                # removes the todo at <index> from your list
 $ rmb Get this to compile       # adds a new todo to your list
