@@ -12,7 +12,7 @@ or
 
 ### Run the release
 
-if you don't want to setup golang you can just download the binary from release and copy it into your `/usr/local/bin/`
+If you don't want to setup Go you can download the binary from release and copy it into your `/usr/local/bin/`
 
 The current build is only for macOS
 
