@@ -12,9 +12,11 @@ or
 
 ### Run the release
 
-If you don't want to setup Go you can download the binary from release and copy it into your `/usr/local/bin/`
+If you don't want to setup Go you can download the binary and copy it into your `/usr/local/bin/`.
+For Windows: release/remember.exe
+For MacOS: release/rmb
 
-The current build is only for macOS
+The current build is only for MacOS and Windows
 
 ## Usage:
 ```
