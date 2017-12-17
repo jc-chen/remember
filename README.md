@@ -16,7 +16,7 @@ If you don't want to setup Go you can download the binary and copy it into your 
 For Windows: release/remember.exe
 For MacOS: release/rmb
 
-The current build is only for MacOS and Windows
+The current build is only for MacOS and Windows.
 
 ## Usage:
 ```
